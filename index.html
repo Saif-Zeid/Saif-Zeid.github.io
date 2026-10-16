@@ -49,7 +49,10 @@
     .tag{font-size:11px;background:var(--soft);color:var(--accent);padding:4px 9px;border-radius:4px}
     .project-link{font-size:14px;font-weight:650;text-decoration:none;align-self:flex-start}
     .project-link:hover{text-decoration:underline}
-    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .skill{padding:25px;background:var(--soft);border:1px solid var(--line);border-radius:10px}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:20px 0 0}
+    .skill-tags li{font-size:12px;line-height:1.5;color:var(--accent);background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:6px 10px}
     .skill h3{font-size:15px;margin-bottom:10px}
     .skill p{color:var(--muted);font-size:14px;margin:0}
     .about{display:grid;grid-template-columns:1fr 2fr;gap:50px}
@@ -130,11 +133,15 @@
       </div>
     </section>
     <section id="skills" aria-labelledby="skills-title">
-      <div class="section-head"><h2 id="skills-title">What I work with</h2></div>
+      <div class="section-head">
+        <h2 id="skills-title">Skills &amp; tools</h2>
+        <p class="section-note">Developed through coursework, personal projects, and labs.</p>
+      </div>
       <div class="skills">
-        <div class="skill"><h3>Security &amp; investigation</h3><p>Log analysis, phishing analysis, threat detection, incident investigation, and network security.</p></div>
-        <div class="skill"><h3>Tools &amp; environments</h3><p>Splunk, Wireshark, Wazuh, VMware, Windows, and Linux.</p></div>
-        <div class="skill"><h3>Code &amp; documentation</h3><p>Python, SQL, Git, SPL searches, investigation reports, and technical documentation.</p></div>
+        <div class="skill"><h3>Security operations</h3><p>Investigating activity and identifying threats.</p><ul class="skill-tags" aria-label="Security operations skills"><li>SIEM monitoring</li><li>Log analysis</li><li>Threat detection</li><li>Incident response</li><li>Phishing analysis</li><li>Vulnerability assessment</li></ul></div>
+        <div class="skill"><h3>Security tools</h3><p>Hands-on experience through projects and labs.</p><ul class="skill-tags" aria-label="Security tools skills"><li>Splunk</li><li>Wireshark</li><li>Wazuh</li><li>TheHive</li><li>Metasploit</li><li>FortiGate</li></ul></div>
+        <div class="skill"><h3>Systems &amp; networking</h3><p>Building and troubleshooting lab environments.</p><ul class="skill-tags" aria-label="Systems &amp; networking skills"><li>Windows</li><li>Linux / Ubuntu</li><li>Kali Linux</li><li>VMware</li><li>TCP/IP &amp; DNS</li><li>Firewalls &amp; access control</li></ul></div>
+        <div class="skill"><h3>Code &amp; communication</h3><p>Turning findings into useful results.</p><ul class="skill-tags" aria-label="Code &amp; communication skills"><li>Python</li><li>SQL / MySQL</li><li>Splunk SPL</li><li>Git &amp; GitHub</li><li>Technical documentation</li><li>Investigation reports</li></ul></div>
       </div>
     </section>
     <section id="about" aria-labelledby="about-title" class="about">
