@@ -72,6 +72,11 @@
     .hero{max-width:none;display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:42px;align-items:center}
     .portrait{display:block;width:240px;height:240px;border-radius:50%;object-fit:cover;object-position:center 43%;border:5px solid white;box-shadow:0 0 0 1px var(--line)}
     @media(max-width:760px){.hero{grid-template-columns:1fr;gap:28px}.portrait{grid-row:1;width:160px;height:160px}.hero-copy{grid-row:2}}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .contact-item{display:flex;flex-direction:column;gap:8px;padding:22px;background:var(--soft);border:1px solid var(--line);border-radius:8px;text-decoration:none;font-size:14px;overflow-wrap:anywhere}
+    .contact-item:hover{border-color:var(--accent);background:white}
+    .contact-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent)}
+    @media(max-width:700px){.contact-grid{grid-template-columns:1fr}header{flex-wrap:wrap}nav{flex-wrap:wrap}}
   </style>
 </head>
 <body>
@@ -83,6 +88,7 @@
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
   <main id="main">
@@ -150,6 +156,14 @@
         <p>I'm based in <strong>Winnipeg, Manitoba</strong>, and studying Cybersecurity at <strong>Red River College Polytechnic</strong>. I'm particularly interested in security operations and phishing prevention.</p>
         <p>I enjoy building lab environments, investigating what the logs reveal, and explaining my findings clearly. This portfolio follows that work as I keep learning.</p>
         <a class="project-link" href="https://github.com/Saif-Zeid">Find me on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="section-head"><h2 id="contact-title">Let's connect</h2><p class="section-note">Co-op opportunities, projects, or a conversation.</p></div>
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:saifzeid1@hotmail.com"><span class="contact-label">Email</span><span>saifzeid1@hotmail.com</span></a>
+        <a class="contact-item" href="tel:+14312939567"><span class="contact-label">Phone</span><span>431-293-9567</span></a>
+        <a class="contact-item" href="https://ca.linkedin.com/in/saif-zeid"><span class="contact-label">LinkedIn</span><span>Connect with Saif <span aria-hidden="true">↗</span></span></a>
       </div>
     </section>
   </main>
