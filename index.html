@@ -66,6 +66,9 @@
       section{padding:34px 0}footer{flex-wrap:wrap}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+    .hero{max-width:none;display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:42px;align-items:center}
+    .portrait{display:block;width:240px;height:240px;border-radius:50%;object-fit:cover;object-position:center 43%;border:5px solid white;box-shadow:0 0 0 1px var(--line)}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;gap:28px}.portrait{grid-row:1;width:160px;height:160px}.hero-copy{grid-row:2}}
   </style>
 </head>
 <body>
@@ -81,6 +84,7 @@
   </header>
   <main id="main">
     <div class="hero">
+      <div class="hero-copy">
       <p class="eyebrow">Cybersecurity portfolio · Winnipeg, Canada</p>
       <h1>Hi, I'm Saif.</h1>
       <p class="intro">Learning how to detect threats,<br>investigate incidents, and protect systems.</p>
@@ -90,6 +94,8 @@
         <a class="button secondary" href="https://github.com/Saif-Zeid">View GitHub <span aria-hidden="true">↗</span></a>
       </div>
       <p class="availability"><span class="dot" aria-hidden="true"></span>Seeking a four-month co-op · January–April 2027 · Open to relocating to Toronto</p>
+      </div>
+      <img class="portrait" src="assets/saif-zeid.jpeg" alt="Saif Zeid" width="240" height="240" fetchpriority="high">
     </div>
     <section id="projects" aria-labelledby="projects-title">
       <div class="section-head">
